@@ -1,4 +1,4 @@
-//Implement pow(x, n), which calculates x raised to the power n (i.e., x^n).
+//Implement pow(x, n), which calculates x raised to the power n (i.e., x^n)
 
 double myPow(double x, int n)
 {
