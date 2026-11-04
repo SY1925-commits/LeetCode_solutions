@@ -1,5 +1,8 @@
-//O(n^2)
+/*
+Given an integer x, return true if x is a palindrome, and false otherwise.
+*/
 
+//O(n^2)
 class Solution {
 public:
     vector<int> twoSum(vector<int>& a, int k) {
@@ -17,26 +20,15 @@ public:
 };
 
 /*
-O(n)
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
 
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& a, int k) {
-        vector<int> res;
-        int s1=0, req=0;
-        unordered_map<int, int> track;
-        for(int i=0; i<a.size(); i++) {
-            s1=a[i];
-            req = k - s1;
-            if(track.find(req) != track.end()) {
-                res.push_back(i);
-                res.push_back(track[req]);
-                return res;
-            }
-            else
-                track[s1] = i;
-        }
-        return res;
-    }
-};
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+
+Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 */
